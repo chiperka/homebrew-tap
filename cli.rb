@@ -5,21 +5,21 @@
 class Cli < Formula
   desc "Declarative API & integration testing. Write YAML, run against real services."
   homepage "https://about.chiperka.com"
-  version "1.9.1"
+  version "1.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chiperka/cli/releases/download/1.9.1/cli_1.9.1_darwin_amd64.tar.gz"
-      sha256 "c7525bd292066e7fad43c2a1584f4cdc1453009e8d3962589e0483b6c9d71b06"
+      url "https://github.com/chiperka/cli/releases/download/1.9.2/cli_1.9.2_darwin_amd64.tar.gz"
+      sha256 "749096da23e2d830ffce79544188ca4eb77f0d364fb7a847d368b7bfae473d9a"
 
       define_method(:install) do
         bin.install "chiperka"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chiperka/cli/releases/download/1.9.1/cli_1.9.1_darwin_arm64.tar.gz"
-      sha256 "3af9e5cc078573bc4558437d387a196a6d167144ec0951c6393dac4d0f42370d"
+      url "https://github.com/chiperka/cli/releases/download/1.9.2/cli_1.9.2_darwin_arm64.tar.gz"
+      sha256 "1336b291a02f60a592586bc1bf2ef8206b1ff2ea81ff683ef33e370490f45d85"
 
       define_method(:install) do
         bin.install "chiperka"
@@ -29,15 +29,15 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chiperka/cli/releases/download/1.9.1/cli_1.9.1_linux_amd64.tar.gz"
-      sha256 "afe8a11548e7cdb33e661b0e67bf7106966e07fcf91d07424d43c728464e80f1"
+      url "https://github.com/chiperka/cli/releases/download/1.9.2/cli_1.9.2_linux_amd64.tar.gz"
+      sha256 "949e98e6f02c2994ff190d29317c8b639a20060d1b72db7cdf40974aec94580a"
       define_method(:install) do
         bin.install "chiperka"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chiperka/cli/releases/download/1.9.1/cli_1.9.1_linux_arm64.tar.gz"
-      sha256 "10315d929aa4c09fef3617407a583efee857e0f85834803f8a30bf6158c6f98b"
+      url "https://github.com/chiperka/cli/releases/download/1.9.2/cli_1.9.2_linux_arm64.tar.gz"
+      sha256 "60c277fd74e247a72d8b87879e9e1973eac94e4aeb2ec6f054feffa8d43a48a8"
       define_method(:install) do
         bin.install "chiperka"
       end
